@@ -32,7 +32,7 @@ const map = ref(null)
  * Return all markers in the current view
  */
 const getMarkersInView = () => {
-  var markers = [];
+  const markers = [];
   map.value.leafletObject.eachLayer(function(layer) {
     if(layer instanceof L.Marker) {
       if(map.value.leafletObject.getBounds().contains(layer.getLatLng())) {
